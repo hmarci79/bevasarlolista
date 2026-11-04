@@ -41,5 +41,15 @@ namespace bevasarlolista
             }
         }
 
+        private void btn_torles_Click(object sender, RoutedEventArgs e)
+        {
+            if (lb_lista.SelectedItem != null)
+            {
+                bevasarlolista.Remove(lb_lista.SelectedItem.ToString());
+                Frissites();
+            }
+        }
+
+
     }
 }
