@@ -50,6 +50,10 @@ namespace bevasarlolista
             }
         }
 
-
+        private void btn_mindentTorol_Click(object sender, RoutedEventArgs e)
+        {
+            bevasarlolista.Clear();
+            Frissites();
+        }
     }
 }
