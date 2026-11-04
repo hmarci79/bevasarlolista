@@ -23,5 +23,23 @@ namespace bevasarlolista
         {
             InitializeComponent();
         }
+
+        private void Frissites()
+        {
+            tb_ossz.Text = "Összes elem: " + bevasarlolista.Count.ToString();
+            lb_lista.ItemsSource = null;
+            lb_lista.ItemsSource = bevasarlolista;
+        }
+
+        private void btn_hozzaad_Click(object sender, RoutedEventArgs e)
+        {
+            if (tb_ujtermek.Text != "")
+            {
+                bevasarlolista.Add(tb_ujtermek.Text);
+                tb_ujtermek.Text = "";
+                Frissites();
+            }
+        }
+
     }
 }
